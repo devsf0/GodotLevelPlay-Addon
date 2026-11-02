@@ -1,4 +1,4 @@
-# GodotLevelPlay-Addon
+# GodotLevelPlay
 
 An easy-to-use Unity LevelPlay (IronSource) SDK integration plugin for the Godot Game Engine.
 
@@ -18,8 +18,16 @@ An easy-to-use Unity LevelPlay (IronSource) SDK integration plugin for the Godot
 ## 🛠️ Installation
 
 1. Download or clone this repository.
-2. Copy the plugin folder into your Godot project's `res://addons/` directory.
-3. Go to **Project > Project Settings > Plugins** in Godot and enable **GodotLevelPlay**.
+2. Ensure your project repository follows the Godot addon structure:
+   ```text
+   GodotLevelPlay/
+   └── addons/
+       └── GodotLevelPlay/
+           ├── plugin.cfg
+           └── (other addon files and scripts)
+   ```
+3. Copy the `addons/GodotLevelPlay` directory into your Godot project's `res://addons/` directory.
+4. Go to **Project > Project Settings > Plugins** in Godot and enable **GodotLevelPlay**.
 
 ---
 
@@ -129,30 +137,30 @@ Below is the complete list of signals emitted by the plugin:
 | Category | Signal Name | Description |
 | :--- | :--- | :--- |
 | **SDK Init** | `on_init_success` | Emitted when LevelPlay SDK initializes successfully. |
-| | `on_init_failed` | Emitted when SDK initialization fails. |
+| **SDK Init** | `on_init_failed` | Emitted when SDK initialization fails. |
 | **Banner** | `on_banner_ad_loaded` | Banner ad is loaded and ready. |
-| | `on_banner_ad_load_failed` | Banner ad failed to load. |
-| | `on_banner_ad_displayed` | Banner ad is currently visible on screen. |
-| | `on_banner_ad_display_failed` | Banner ad failed to present. |
-| | `on_banner_ad_clicked` | User clicked the banner ad. |
-| | `on_banner_ad_expanded` | Banner opened full-screen view. |
-| | `on_banner_ad_collapsed` | Banner returned to normal size. |
-| | `on_banner_ad_left_application` | User left the app after clicking banner. |
-| **Interstitial**| `on_interstitial_ad_loaded` | Interstitial ad loaded successfully. |
-| | `on_interstitial_ad_load_failed` | Interstitial ad failed to load. |
-| | `on_interstitial_ad_displayed` | Interstitial ad displayed on screen. |
-| | `on_interstitial_ad_display_failed`| Interstitial ad failed to show. |
-| | `on_interstitial_ad_clicked` | User clicked on interstitial ad. |
-| | `on_interstitial_ad_closed` | User closed the interstitial ad. |
-| | `on_interstitial_ad_info_changed` | Interstitial ad info/impression updated. |
+| **Banner** | `on_banner_ad_load_failed` | Banner ad failed to load. |
+| **Banner** | `on_banner_ad_displayed` | Banner ad is currently visible on screen. |
+| **Banner** | `on_banner_ad_display_failed` | Banner ad failed to present. |
+| **Banner** | `on_banner_ad_clicked` | User clicked the banner ad. |
+| **Banner** | `on_banner_ad_expanded` | Banner opened full-screen view. |
+| **Banner** | `on_banner_ad_collapsed` | Banner returned to normal size. |
+| **Banner** | `on_banner_ad_left_application` | User left the app after clicking banner. |
+| **Interstitial** | `on_interstitial_ad_loaded` | Interstitial ad loaded successfully. |
+| **Interstitial** | `on_interstitial_ad_load_failed` | Interstitial ad failed to load. |
+| **Interstitial** | `on_interstitial_ad_displayed` | Interstitial ad displayed on screen. |
+| **Interstitial** | `on_interstitial_ad_display_failed` | Interstitial ad failed to show. |
+| **Interstitial** | `on_interstitial_ad_clicked` | User clicked on interstitial ad. |
+| **Interstitial** | `on_interstitial_ad_closed` | User closed the interstitial ad. |
+| **Interstitial** | `on_interstitial_ad_info_changed` | Interstitial ad info/impression updated. |
 | **Rewarded** | `on_rewarded_ad_loaded` | Rewarded ad loaded successfully. |
-| | `on_rewarded_ad_load_failed` | Rewarded ad failed to load. |
-| | `on_rewarded_ad_displayed` | Rewarded ad displayed on screen. |
-| | `on_rewarded_ad_rewarded` | User earned the reward after completion. |
-| | `on_rewarded_ad_display_failed` | Rewarded ad failed to show. |
-| | `on_rewarded_ad_clicked` | User clicked on rewarded ad. |
-| | `on_rewarded_ad_closed` | User closed rewarded ad. |
-| | `on_rewarded_ad_info_changed` | Rewarded ad info/impression updated. |
+| **Rewarded** | `on_rewarded_ad_load_failed` | Rewarded ad failed to load. |
+| **Rewarded** | `on_rewarded_ad_displayed` | Rewarded ad displayed on screen. |
+| **Rewarded** | `on_rewarded_ad_rewarded` | User earned the reward after completion. |
+| **Rewarded** | `on_rewarded_ad_display_failed` | Rewarded ad failed to show. |
+| **Rewarded** | `on_rewarded_ad_clicked` | User clicked on rewarded ad. |
+| **Rewarded** | `on_rewarded_ad_closed` | User closed rewarded ad. |
+| **Rewarded** | `on_rewarded_ad_info_changed` | Rewarded ad info/impression updated. |
 
 ---
 
